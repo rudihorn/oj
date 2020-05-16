@@ -1068,7 +1068,8 @@ dump(int argc, VALUE *argv, VALUE self) {
 	oj_parse_options(argv[1], &copts);
     }
     if (CompatMode == copts.mode && copts.escape_mode != ASCIIEsc) {
-	copts.escape_mode = JSONEsc;
+	//copts.escape_mode = JSONEsc;
+	copts.escape_mode = JXEsc;
     }
     out.buf = buf;
     out.end = buf + sizeof(buf) - 10;
